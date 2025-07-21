@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: solpump-telegram-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    branch: main
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
